@@ -1,0 +1,17 @@
+<layer name="space" left=128> <img src="C:\Users\my pc\Downloads\mh2.jpg"> </layer>
+<script>
+function moving()
+{ if (document.space.left<1000)
+document.space.left+=5
+moveid=setTimeout("moving()",50)
+}
+function come_back()
+{ clearTimeout(moveid)
+document.space.left=128
+}
+</script>
+ 
+<form>
+<input type="button" value="Move" onClick="moving()">
+<input type="button" value="Come back" onClick="come_back()">
+</form>
